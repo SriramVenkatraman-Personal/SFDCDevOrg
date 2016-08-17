@@ -1,5 +1,6 @@
 @isTest private without sharing class DB_Custom_Vendor_c
 {
+	// Sriram added a comment here
 	@isTest (SeeAllData=true)
 	private static void testTrigger()
 	{

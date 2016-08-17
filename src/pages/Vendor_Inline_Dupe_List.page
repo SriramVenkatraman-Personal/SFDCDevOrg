@@ -1,0 +1,40 @@
+<apex:page sidebar="false" standardController="Vendor__c" extensions="Vendor_Inline_Dupe_List_Controller">
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockTable value="{!dupes}" var="dupe" id="theTable" rowClasses="odd,even" styleClass="tableClass">
+                <apex:column >
+                    <apex:facet name="header">Vendor Name</apex:facet>
+                    <apex:outputLink value="/{!dupe.dupeRecord.Id}" target="_blank">{!dupe.dupeRecord.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Street Address</apex:facet>
+                    <apex:outputText >{!dupe.dupeRecord.Street_Address__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">City</apex:facet>
+                    <apex:outputText >{!dupe.dupeRecord.City__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">State</apex:facet>
+                    <apex:outputText >{!dupe.dupeRecord.State__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Zip</apex:facet>
+                    <apex:outputText >{!dupe.dupeRecord.Zip__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Owner</apex:facet>
+                    <apex:outputText value="{!dupe.dupeRecord.Owner.Name}" />
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Warning</apex:facet>
+                    <apex:outputLink value="/{!dupe.potDupe.CRMfusionDBR101__Duplicate_Warning__c}" target="_blank">{!dupe.potDupe.CRMfusionDBR101__Duplicate_Warning__r.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Scenario</apex:facet>
+                    <apex:outputLink value="/{!dupe.potDupe.CRMfusionDBR101__Scenario__c}" target="_blank">{!dupe.potDupe.CRMfusionDBR101__Scenario__r.Name}</apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TestCo Lead</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestCo Leads</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Revenue --></label>
+        <name>AnnualRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Received Connection ID --></label>
+        <name>ConnectionReceivedId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent Connection ID --></label>
+        <name>ConnectionSentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Account ID --></label>
+        <name>ConvertedAccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Contact ID --></label>
+        <name>ConvertedContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Date --></label>
+        <name>ConvertedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Opportunity ID --></label>
+        <name>ConvertedOpportunityId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By ID --></label>
+        <name>CreatedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Currency --></label>
+        <name>CurrencyIsoCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Bounced Date --></label>
+        <name>EmailBouncedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Bounced Reason --></label>
+        <name>EmailBouncedReason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geocode Accuracy --></label>
+        <name>GeocodeAccuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Validation Status --></label>
+        <name>INFA_AV_Address_Validation_Status_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted --></label>
+        <name>IsConverted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unread By Owner --></label>
+        <name>IsUnreadByOwner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jigsaw Contact ID --></label>
+        <name>JigsawContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data.com Key --></label>
+        <name>Jigsaw__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity --></label>
+        <name>LastActivityDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By ID --></label>
+        <name>LastModifiedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Referenced Date --></label>
+        <name>LastReferencedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Viewed Date --></label>
+        <name>LastViewedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latitude --></label>
+        <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>LeadSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Longitude --></label>
+        <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Record ID --></label>
+        <name>MasterRecordId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employees --></label>
+        <name>NumberOfEmployees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner ID --></label>
+        <name>OwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo URL --></label>
+        <name>PhotoUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip/Postal Code --></label>
+        <name>PostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salutation --></label>
+        <name>Salutation__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Modstamp --></label>
+        <name>SystemModstamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- User ID --></label>
+        <name>User_ID_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Website --></label>
+        <name>Website__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

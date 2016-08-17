@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SriramCo Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SriramCo Accounts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>AccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Source --></label>
+        <name>AccountSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Revenue --></label>
+        <name>AnnualRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Address --></label>
+        <name>BillingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing City --></label>
+        <name>BillingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Country --></label>
+        <name>BillingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Geocode Accuracy --></label>
+        <name>BillingGeocodeAccuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Latitude --></label>
+        <name>BillingLatitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Longitude --></label>
+        <name>BillingLongitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Zip/Postal Code --></label>
+        <name>BillingPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing State/Province --></label>
+        <name>BillingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Street --></label>
+        <name>BillingStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By ID --></label>
+        <name>CreatedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Portal Account --></label>
+        <name>IsCustomerPortal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Account --></label>
+        <name>IsPartner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jigsaw Company ID --></label>
+        <name>JigsawCompanyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data.com Key --></label>
+        <name>Jigsaw__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity --></label>
+        <name>LastActivityDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By ID --></label>
+        <name>LastModifiedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Referenced Date --></label>
+        <name>LastReferencedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Viewed Date --></label>
+        <name>LastViewedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Record ID --></label>
+        <name>MasterRecordId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employees --></label>
+        <name>NumberOfEmployees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner ID --></label>
+        <name>OwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership --></label>
+        <name>Ownership__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account ID --></label>
+        <name>ParentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo URL --></label>
+        <name>PhotoUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Address --></label>
+        <name>ShippingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping City --></label>
+        <name>ShippingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Country --></label>
+        <name>ShippingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Geocode Accuracy --></label>
+        <name>ShippingGeocodeAccuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Latitude --></label>
+        <name>ShippingLatitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Longitude --></label>
+        <name>ShippingLongitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Zip/Postal Code --></label>
+        <name>ShippingPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping State/Province --></label>
+        <name>ShippingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Street --></label>
+        <name>ShippingStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIC Description --></label>
+        <name>SicDesc__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIC Code --></label>
+        <name>Sic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Site --></label>
+        <name>Site__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Modstamp --></label>
+        <name>SystemModstamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ticker Symbol --></label>
+        <name>TickerSymbol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Website --></label>
+        <name>Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>sriram68_Active_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Priority --></label>
+        <name>sriram68_CustomerPriority_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Locations --></label>
+        <name>sriram68_NumberofLocations_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Expiration Date --></label>
+        <name>sriram68_SLAExpirationDate_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Serial Number --></label>
+        <name>sriram68_SLASerialNumber_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>sriram68_SLA_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>sriram68_UpsellOpportunity_c__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

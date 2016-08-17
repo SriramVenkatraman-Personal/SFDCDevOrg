@@ -1,0 +1,33 @@
+<apex:page >
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsforce/1.7.0/jsforce.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+//      var jsforce = require('jsforce');
+        var conn = new jsforce.Connection({
+          // you can change loginUrl to connect to sandbox or prerelease env.
+          loginUrl : 'test.salesforce.com' 
+        });
+        conn.login("sriram.venkatraman@aexp.com.archpoc", "Portland!123ixu2jNCinKu20ntmZZ65YhzEA", function(err, userInfo) {
+          if (err) {alert(err); return console.error(err); }
+          // Now you can get the access token and instance URL information.
+          // Save them to establish connection next time.
+          console.log(conn.accessToken);
+          console.log(conn.instanceUrl);
+          // logged in user property
+          console.log("User ID: " + userInfo.id);
+          console.log("Org ID: " + userInfo.organizationId);
+          // ...
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>jQuery AJAX test</h2></div>
+    <button>Get External Content</button>
+</body>
+</apex:page>

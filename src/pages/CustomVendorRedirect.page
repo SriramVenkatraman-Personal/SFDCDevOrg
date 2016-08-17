@@ -1,0 +1,134 @@
+<apex:page showHeader="false" sidebar="false" controller="CustomVendorRedirectController">
+    <style type="text/css">
+body,html,iframe {
+    height: 100%;
+    width: 100%
+}
+
+div.matchesDiv {
+    /*********************************************/
+    /* Set dupes list box size here.             */
+    /*********************************************/
+/*    height: 6em;
+    width: 25em;
+    position: absolute;
+    top: 1px;
+    right: 19px;
+    background-color: #F3F3EC;
+    border: 1px coral solid;
+    border-color: black;
+    z-index: 99999;*/
+}
+</style>
+    <BODY style="margin: 0; padding 0; border: 0; overflow: hidden; min-height: 100%;" onresize="resize()" onload="bodyLoad()">
+        <DIV id="matchesDiv" class="matchesDiv" style="visibility: hidden;">
+            <DIV style="padding: .3em; overflow: hidden; height: 100%; width: 100%;">
+                <B>Possible Duplicates:</B>
+                <DIV id="dupesList" style="height: 70%; width: 98%; overflow: auto; margin: 0; padding: 0;">
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockTable value="{!dupes}" var="dupe" id="theTable" rowClasses="odd,even" styleClass="tableClass">
+                <apex:column >
+                    <apex:facet name="header">Vendor Name</apex:facet>
+                    <apex:outputLink value="/{!dupe.Id}" target="_blank">{!dupe.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Street Address</apex:facet>
+                    <apex:outputText >{!dupe.Street_Address__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">City</apex:facet>
+                    <apex:outputText >{!dupe.City__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">State</apex:facet>
+                    <apex:outputText >{!dupe.State__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Zip</apex:facet>
+                    <apex:outputText >{!dupe.Zip__c}</apex:outputText>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Owner</apex:facet>
+                    <apex:outputText value="{!dupe.Owner.Name}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+                </DIV>
+            </DIV>
+            <DIV style="position: absolute; top: 1px; right: 1px;">
+                <a href="javascript:hideMatches();" title="Close this window.">Return to previous page</a>&nbsp;
+            </DIV>
+        </DIV>
+
+        <DIV id="warningDiv"
+            style="position: absolute; width: 20em; left: 50%; top: 50%; margin-left: -10em; margin-top: -5em; background-color: #F3F3EC; border: 1px coral solid; border-color: black;"
+            height="100px" width="200px">
+            <DIV style="margin: 0.5em;">
+                <FONT> You have been redirected to this page because a duplicate record was detected.</FONT><BR />
+                <P align="center">
+                    <BUTTON onClick='closeWarning()'>Close</BUTTON>
+                </P>
+            </DIV>
+        </DIV>
+
+
+        <IFRAME onload="resize()" id="displayFrame" name="displayFrame" scrolling="auto" style="border: 0; width: 100%; height: 100%;"
+            src="/{!dupes[0].Id}" />
+    </body>
+<script type="text/javascript">
+var redirectTo = '/{!dupes[0].Id}';
+
+// Resize the main iframe to match our window size.
+function resize()
+{
+    document.getElementById( 'displayFrame' ).style.height = document.body.clientHeight + "px";
+}
+
+// Set the window onresize event to resize the main iframe.
+function bodyLoad()
+{
+    window.onResize = resize;
+    listDupes();
+    resize();
+}
+
+// Hide the dupe list box.
+function hideMatches()
+{
+    //alert("Here: " + redirectTo);
+    history.go(-1); //- this works
+    //window.location = "/a0b/e";
+    //document.location = redirectTo;
+}
+
+// Close our redirection warning.
+function closeWarning()
+{
+    document.getElementById( 'warningDiv' ).style.visibility = 'hidden';
+    if ( {!dupeCount} < 1 )
+        document.location = '/{!dupes[0].Id}';
+}
+
+// Whenever a new match is selected from the match list in the upper right,
+// set our redirection URL.  We'll browse to this URL when the match list in the
+// upper right is closed.
+function setRedirectByIndex( redirectId)
+{
+    redirectTo = '/' + redirectId;
+}
+
+// Load the list of dupes from a dupes URL parameter that is a URL encoded array HTML <A> elements.
+function listDupes()
+{
+    // If there is more than one dupe, show our dupe list div.
+    if ( {!dupeCount} >= 1 )
+    {
+        var matchesDiv = document.getElementById( 'matchesDiv' );
+        matchesDiv.style.visibility = '';
+    }
+}
+</script>
+</apex:page>

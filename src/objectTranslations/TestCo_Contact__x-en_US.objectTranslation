@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TestCo Contact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestCo Contacts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account ID --></label>
+        <name>AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assistant&apos;s Name --></label>
+        <name>AssistantName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asst. Phone --></label>
+        <name>AssistantPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Birthdate --></label>
+        <name>Birthdate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Customer Portal Self-Registration --></label>
+        <name>CanAllowPortalSelfReg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Received Connection ID --></label>
+        <name>ConnectionReceivedId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent Connection ID --></label>
+        <name>ConnectionSentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By ID --></label>
+        <name>CreatedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Currency --></label>
+        <name>CurrencyIsoCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Account --></label>
+        <name>Customer_Account_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Birth --></label>
+        <name>Date_of_Birth_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Bounced Date --></label>
+        <name>EmailBouncedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Bounced Reason --></label>
+        <name>EmailBouncedReason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Phone --></label>
+        <name>HomePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address Validation Status --></label>
+        <name>INFA_AV_Mailing_Address_Validation_Statu__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Address Validation Status --></label>
+        <name>INFA_AV_Other_Address_Validation_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Email Bounced --></label>
+        <name>IsEmailBounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Person Account --></label>
+        <name>IsPersonAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jigsaw Contact ID --></label>
+        <name>JigsawContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data.com Key --></label>
+        <name>Jigsaw__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity --></label>
+        <name>LastActivityDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Stay-in-Touch Request Date --></label>
+        <name>LastCURequestDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Stay-in-Touch Save Date --></label>
+        <name>LastCUUpdateDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By ID --></label>
+        <name>LastModifiedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Referenced Date --></label>
+        <name>LastReferencedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Viewed Date --></label>
+        <name>LastViewedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>LeadSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address --></label>
+        <name>MailingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing City --></label>
+        <name>MailingCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Country --></label>
+        <name>MailingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Geocode Accuracy --></label>
+        <name>MailingGeocodeAccuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Latitude --></label>
+        <name>MailingLatitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Longitude --></label>
+        <name>MailingLongitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Zip/Postal Code --></label>
+        <name>MailingPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing State/Province --></label>
+        <name>MailingState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Street --></label>
+        <name>MailingStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Record ID --></label>
+        <name>MasterRecordId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Phone --></label>
+        <name>MobilePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Address --></label>
+        <name>OtherAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other City --></label>
+        <name>OtherCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Country --></label>
+        <name>OtherCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Geocode Accuracy --></label>
+        <name>OtherGeocodeAccuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Latitude --></label>
+        <name>OtherLatitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Longitude --></label>
+        <name>OtherLongitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Phone --></label>
+        <name>OtherPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Zip/Postal Code --></label>
+        <name>OtherPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other State/Province --></label>
+        <name>OtherState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Street --></label>
+        <name>OtherStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner ID --></label>
+        <name>OwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo URL --></label>
+        <name>PhotoUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reports To ID --></label>
+        <name>ReportsToId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salutation --></label>
+        <name>Salutation__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Modstamp --></label>
+        <name>SystemModstamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

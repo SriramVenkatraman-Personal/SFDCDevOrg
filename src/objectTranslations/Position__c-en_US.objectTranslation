@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Position</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Positions</value>
+    </caseValues>
+    <fields>
+        <help><!-- The department the position is in. --></help>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Minimum educational level required for the position. --></help>
+        <label><!-- Educational Requirements --></label>
+        <name>Educational_Requirements__c</name>
+        <picklistValues>
+            <masterLabel>College</masterLabel>
+            <translation><!-- College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High school</masterLabel>
+            <translation><!-- High school --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Masters</masterLabel>
+            <translation><!-- Masters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PhD</masterLabel>
+            <translation><!-- PhD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-doc</masterLabel>
+            <translation><!-- Post-doc --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Description of position to be filled. --></help>
+        <label><!-- Job Description --></label>
+        <name>Job_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identification of the position from legacy system. --></help>
+        <label><!-- Legacy ID --></label>
+        <name>Legacy_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- The location of the position. --></help>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <help><!-- Programming languages required for this position. --></help>
+        <label><!-- Programming Languages --></label>
+        <name>Programming_Languages__c</name>
+        <picklistValues>
+            <masterLabel>.Net</masterLabel>
+            <translation><!-- .Net --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apex</masterLabel>
+            <translation><!-- Apex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COBOL</masterLabel>
+            <translation><!-- COBOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORTRAN</masterLabel>
+            <translation><!-- FORTRAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Java</masterLabel>
+            <translation><!-- Java --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHP</masterLabel>
+            <translation><!-- PHP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perl</masterLabel>
+            <translation><!-- Perl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Python</masterLabel>
+            <translation><!-- Python --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Responsibilities of position. --></help>
+        <label><!-- Responsibilities --></label>
+        <name>Responsibilities__c</name>
+    </fields>
+    <fields>
+        <help><!-- Salary grade for position. --></help>
+        <label><!-- Salary Grade --></label>
+        <name>Salary_Grade__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ENG-100</masterLabel>
+            <translation><!-- ENG-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ENG-200</masterLabel>
+            <translation><!-- ENG-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ENG-300</masterLabel>
+            <translation><!-- ENG-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ENG-400</masterLabel>
+            <translation><!-- ENG-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN-100</masterLabel>
+            <translation><!-- FIN-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN-200</masterLabel>
+            <translation><!-- FIN-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN-300</masterLabel>
+            <translation><!-- FIN-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN-400</masterLabel>
+            <translation><!-- FIN-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-100</masterLabel>
+            <translation><!-- IT-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-200</masterLabel>
+            <translation><!-- IT-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-300</masterLabel>
+            <translation><!-- IT-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-400</masterLabel>
+            <translation><!-- IT-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAL-100</masterLabel>
+            <translation><!-- SAL-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAL-200</masterLabel>
+            <translation><!-- SAL-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAL-300</masterLabel>
+            <translation><!-- SAL-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAL-400</masterLabel>
+            <translation><!-- SAL-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP-100</masterLabel>
+            <translation><!-- SUP-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP-200</masterLabel>
+            <translation><!-- SUP-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP-300</masterLabel>
+            <translation><!-- SUP-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUP-400</masterLabel>
+            <translation><!-- SUP-400 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date which the position starts. --></help>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status for the position. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Programming languages required for this position. --></help>
+        <label><!-- Sub-status --></label>
+        <name>Sub_status__c</name>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filled</masterLabel>
+            <translation><!-- Filled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must specify an educational requirement for this position. --></errorMessage>
+        <name>Required_Education_Specification</name>
+    </validationRules>
+</CustomObjectTranslation>

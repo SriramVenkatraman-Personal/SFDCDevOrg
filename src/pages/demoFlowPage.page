@@ -1,0 +1,250 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false" docType="html-5.0" controller="demoFlowController">
+    <html lang="en">
+        <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <!-- Bootstrap core CSS -->
+            <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'bootstrap-3.3.6-dist/css/bootstrap.min.css')}" />
+            <apex:stylesheet value="{!$Resource.My_CSS}" />
+            
+            <script>
+                /* When an old screen is clicked, all the screens that were populated after it need to be removed from the page */
+                function clickedScreen(clicked) {
+                    var screens = document.getElementsByClassName('screen');
+                    if(clicked != screens[screens.length - 1].id) {
+                        for(var i = screens.length - 1; i >= 0; i--) { // Loop backwards through divs, removing screens until the screen that was clicked on is the most current one visible
+                             if(screens[i].id == clicked.id) {
+                                 break;
+                             } else {
+                                 screens[i].parentNode.removeChild(screens[i]);
+                             }
+                        }
+                        var buttons = screens[i].getElementsByTagName('input');// Re-display the buttons from that screen
+                        for(var j = 0; j < buttons.length; j++){
+                            if(buttons[j].type == 'submit'){
+                                buttons[j].style.display = 'block';
+                            }
+                        }
+                        
+                        try {
+                            var allBtns = screens[i].getElementsByTagName('a');
+                            var pauseBtn = allBtns[allBtns.length-2];
+                            pauseBtn.style.display = 'block'; // Re-display Pause
+                            var nextBtn = allBtns[allBtns.length-1];
+                            nextBtn.style.display = 'block'; // Re-display Next
+                        } catch (e) {}
+                     }
+                }
+                /* These functions are the only thing hardcoded in the entire client.
+                In the demo flow, a radio button field asks "Would you like to hear about our future promotions?" The options are "Yes, by text", "Yes, by email", and "No thanks".
+                Depending what the user selects, the app displays a Phone input field, an Email input field, or neither.
+                These next 4 functions handle this functionality*/
+                function hideFields(){
+                    document.getElementById('Promo_Phone').style.display = "none";
+                    document.getElementById('Email').style.display = "none";
+                }
+
+                function byEmail(){
+                    document.getElementById('Promo_Phone').style.display = "none";
+                    document.getElementById('Email').style.display = "inline";
+                }
+
+                function byText(){
+                    document.getElementById('Promo_Phone').style.display = "inline";
+                    document.getElementById('Email').style.display = "none";
+                }
+                function future_promos(){
+                    var clicked = false;
+                    var inputs = document.getElementsByTagName("input");
+                    for(var i = 0; i < inputs.length; i++) {
+                        if(inputs[i].type == 'radio') {
+                            if(inputs[i].value == 'Yes_Email'){
+                                inputs[i].onclick = function() { byEmail(); };
+                                if(!inputs[i].checked){
+                                    document.getElementById('Email').style.display = "none";
+                                }
+                            }else if(inputs[i].value == 'Yes_Text'){
+                                inputs[i].onclick = function() { byText(); };
+                                if(!inputs[i].checked){
+                                    document.getElementById('Promo_Phone').style.display = "none";
+                                }
+                            }else if(inputs[i].value =='No_thanks'){
+                                inputs[i].onclick = function() { hideFields(); };
+                            }
+                        }
+                   }
+                }
+                
+                /* The Next and Pause buttons are the only things on a screen in an <a> tag, and the Next button always comes second, 
+                so when a trigger button is clicked, this function finds the first <a> tag and "clicks" it*/
+                function nextScreen(screenName){
+                    try {
+                        var allBtns = document.getElementById(screenName).getElementsByTagName('a');
+                        var btn = allBtns[allBtns.length-1];
+                        btn.click();
+                    } catch (e) {}
+                }
+                
+                /* This function looks for radio buttons whose unique names start with "Trigger",
+                then attaches an action listener so that when the user clicks one of the radio buttons
+                the interview automatically moves to the next screen */
+                function triggers(screenName){
+                    console.debug();
+                    var screen = document.getElementById(screenName);
+                    var inputs = screen.getElementsByTagName('input');
+                    var found = 'false';
+                    for(var i = 0; i < inputs.length; i++){
+                        if(inputs[i].value.split("_")[0] == 'Trigger'){
+                            inputs[i].onclick = function() {nextScreen(screenName)};
+                            found = 'true';
+                            console.log('true true true');
+                          }
+                    }
+                    if(found == 'true') { // If a trigger radio button is found, to prevent confusion, the Next button on that screen should be hidden
+                        try {
+                            var allBtns = screen.getElementsByTagName('a');
+                            var btn = allBtns[allBtns.length - 1];
+                            btn.style.display = 'none';
+                        } catch(e) {}
+                    }
+                }
+                
+                /* This function checks the END of a screen's unique name for the keyword "Right" (so it doesn't interfere with the keyword "New")
+                and formats the page so any screens with this keyword go in a column to the right */
+                function format() {
+                    var screens = document.getElementsByClassName('screen');
+                    for(var i = 0; i < screens.length; i++){
+                        var name = screens[i].id.split("_");
+                        if(name[name.length - 1] == 'Right' || name[name.length - 2] == 'Right'){
+                            screens[i].className = screens[i].className + ' right';
+                        } else if(name[name.length - 1] == 'Left' || name[name.length - 2] == 'Left'){
+                            screens[i].className = screens[i].className + ' left';
+                        } else {
+                            screens[i].className = screens[i].className + ' full';
+                        } 
+                    }
+                }
+           </script>
+        </head>
+        <body>
+            <apex:outputPanel id="wholePage">
+                <apex:outputPanel >
+                <!-- Content and container are used for CSS -->
+                <div id="content" style="width:90%">
+                    <div id="container" class="container" style="width:100%">
+                        <!--Build page header-->
+                        <div class="page-header" style="overflow:hidden;">
+                            <apex:image url="{!$Resource.Logo}" width="78px;" height="50px" style="float:left;"/>
+                            <h1 style="float:left;">{!flowLabel}</h1> 
+                        </div>
+                        <!--Begin form-->
+                        <apex:form id="mainForm">
+                            <!-- Loops through current page of screens to display fields -->
+                            <apex:repeat value="{!screens}" var="s" rendered="{!!hasResume}">
+                                <div class="screen" id="{!s.screenName}" onclick="clickedScreen({!s.screenName})">
+                                    <!-- Deals with error messages, when present -->
+                                            <apex:outputpanel rendered="{!s.error != null}">
+                                                <div class="alert alert-danger" role="alert" aria-hidden="true">
+                                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                                    {!s.error}
+                                                </div>
+                                            </apex:outputpanel>
+                                    <!-- Loops through all fields in a screen -->
+                                    <apex:repeat value="{!s.fields}" var="f">
+                                        <div class="form-group" id="{!f.name}">
+                                            <!-- Sets variable to indicate if the field is required--to be used later -->
+                                            <apex:variable var="req" value="{!f.isRequired == true}"/>
+                                            <apex:outputpanel rendered="{!f.error != null}">
+                                                <div class="alert alert-danger" role="alert" aria-hidden="true">
+                                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                                    {!f.error}
+                                                </div>
+                                            </apex:outputpanel>
+                                         <!-- Displays all types of field -->
+                                         <apex:outputPanel rendered="{!f.fieldType == 'DISPLAY_TEXT'}">
+                                         <p>
+                                             <apex:outputtext escape="false" value="{!f.field}"/>
+                                         </p>
+                                         </apex:outputPanel>
+                                         <apex:outputPanel rendered="{!f.fieldType != 'DISPLAY_TEXT'}">
+                                             <label>
+                                             <apex:outputtext escape="false" value="{!f.field}"/>
+                                             </label>
+                                         </apex:outputPanel>
+
+                                        <!-- Figures out what kind of field it is and displays it appropriately -->
+                                        <apex:inputText rendered="{!f.textFieldType == 'text'}" styleClass="form-control full" value="{!f.value}" required="{!req}" disabled="{!hasStartOver}"/>
+                                        <apex:input rendered="{!f.textFieldType == 'date'}" type="date" styleClass="form-control full" value="{!f.value}" required="{!req}" disabled="{!hasStartOver}"/>
+                                        <apex:inputsecret styleClass="form-control full" rendered="{!f.fieldType == 'PASSWORD'}" value="{!f.value}" required="{!req}" disabled="{!hasStartOver}"/>
+                                        <apex:inputcheckbox rendered="{!f.fieldType == 'INPUT' && f.textFieldType == null}" value="{!f.boolValue}" disabled="{!hasStartOver}"/>
+                                        <apex:inputTextarea styleClass="form-control full" rendered="{!f.fieldType == 'LARGE_TEXT_INPUT'}" value="{!f.value}" required="{!req}" disabled="{!hasStartOver}"/>
+                                        <apex:selectRadio layout="pageDirection" styleClass="radio full" value="{!f.oneSelected}" rendered="{!f.fieldType == 'RADIO_BUTTONS'}" required="{!req}" disabled="{!hasStartOver}">
+                                            <apex:selectOptions html-class="radio" value="{!f.choices}"/>
+                                        </apex:selectRadio>
+                                        <apex:selectList styleClass="dropdown full" rendered="{!f.fieldType == 'DROPDOWN'}" value="{!f.oneSelected}" size="1" required="{!req}" disabled="{!hasStartOver}"> 
+                                            <apex:selectOptions value="{!f.choices}" /> 
+                                        </apex:selectList>
+                                        <apex:selectCheckboxes layout="pageDirection" styleClass="checkbox full" value="{!f.selected}" rendered="{!f.fieldType == 'CHECKBOXES'}" required="{!req}" disabled="{!hasStartOver}">
+                                            <apex:selectOptions value="{!f.choices}"/>
+                                        </apex:selectCheckboxes>
+                                        <apex:selectCheckboxes layout="pageDirection" styleClass="checkbox full" value="{!f.selected}" rendered="{!f.fieldType == 'PICKLIST'}" required="{!req}" disabled="{!hasStartOver}">
+                                            <apex:selectOptions value="{!f.choices}"/>
+                                        </apex:selectCheckboxes>
+                                    </div>
+                                </apex:repeat>
+                                <!-- Displays the navigation buttons in every screen. If the screen being printed is not the "current" screen, the buttons are set to display:none -->
+                                <apex:outputPanel rendered="{!s.screenName == currentScreen.screenName}">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <apex:commandLink styleClass="btn btn-default" action="{!back}" value="Previous" rendered="{!hasBack}">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!pause}" value="Pause" rendered="{!hasPause}">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!finish}" value="Finish" rendered="{!hasFinish}" rerender="wholePage">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!next}" value="Next" rendered="{!s.hasNext}">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandButton styleClass="btn btn-default" action="{!startOver}" value="Start Over" rendered="{!hasStartOver}"/>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!s.screenName != currentScreen.screenName}">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <apex:commandLink styleClass="btn btn-default" action="{!back}" value="Previous" rendered="{!hasBack}" style="display:none">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!pause}" value="Pause" rendered="{!hasPause}" style="display:none">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!finish}" value="Finish" rendered="{!hasFinish}" rerender="wholePage" style="display:none">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandLink styleClass="btn btn-default" action="{!next}" value="Next" rendered="{!s.hasNext}" style="display:none">
+                                            <apex:param name="name" value="{!s.screenName}" assignTo="{!chosenScreen}"/>
+                                        </apex:commandLink>
+                                        <apex:commandButton styleClass="btn btn-default" action="{!startOver}" value="Start Over" rendered="{!hasStartOver}" style="display:none"/>
+                                    </div>
+                                </apex:outputPanel>
+                            </div>
+                            <script>
+                                <!-- Looks for Trigger radio buttons in current screen -->
+                                triggers("{!s.screenName}");
+                            </script>
+                            </apex:repeat>
+                            <apex:commandButton styleClass="btn btn-default" action="{!resume}" value="Resume" rendered="{!hasResume}"/>
+                        </apex:form>
+                    </div>
+                </div>
+                <script>
+                    <!-- Checks whole page for "Right" tag, and future promotion buttons -->
+                    format();
+                    future_promos();
+                </script>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </body>
+    </html>
+</apex:page>

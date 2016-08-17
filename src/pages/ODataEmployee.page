@@ -1,0 +1,120 @@
+<apex:page standardcontroller="Employees__x" Extensions="ODataEmployee" cache="true" showHeader="false">
+    <script type="text/javascript" src="https://na15.salesforce.com/canvas/sdk/js/29.0/canvas-all.js" />
+
+    <script>
+
+        var sr = JSON.parse(JSON.stringify({!signedRequest}));
+
+        // Subscribe to a custom event.
+        Sfdc.canvas(function() {
+            Sfdc.canvas.client.subscribe(sr.client,
+                {name : 'sriram68.testAction', onData : function (event) {
+                    console.log("Subscribed to custom event ", event.status);
+                }}
+            );
+        });
+        
+        // Get the canvas app sizes in the sizes object.
+        var sizes = Sfdc.canvas.client.size();
+        console.log("contentHeight; " + sizes.heights.contentHeight);
+        console.log("pageHeight; " + sizes.heights.pageHeight);
+        console.log("scrollTop; " + sizes.heights.scrollTop);
+        console.log("contentWidth; " + sizes.widths.contentWidth);
+        console.log("pageWidth; " + sizes.widths.pageWidth);
+        console.log("scrollLeft; " + sizes.widths.scrollLeft);
+
+        // Reference the Chatter user's URL from Context.Links object.
+        var chatterUsersUrl = sr.context.links.chatterUsersUrl;
+
+        // Make an XHR call back to salesforce through the supplied browser proxy.
+        Sfdc.canvas.client.ajax(chatterUsersUrl, {
+            client: sr.client,
+            success: function(data) {
+                // Make sure the status code is OK.
+                if (data.status === 200) {
+                    // Alert with how many Chatter users were returned.
+                    console.log("Got back " + data.payload.users.length +
+                        " users"); // Returned 2 users
+                }
+            }
+        });
+
+        // Reference the Chatter user's URL from Context.Links object.
+        var url = sr.context.links.chatterFeedsUrl + "/news/" + sr.context.user.userId + "/feed-items";
+        var body = {
+            body: {
+                messageSegments: [{
+                    type: "Text",
+                    text: "Some Chatter Post"
+                }]
+            }
+        };
+        Sfdc.canvas.client.ajax(url, {
+            client: sr.client,
+            method: 'POST',
+            contentType: "application/json",
+            data: JSON.stringify(body),
+            success: function(data) {
+                if (201 === data.status) {
+                    console.log("Chatter Post was Success");
+                }
+            }
+        });
+
+        // Turn on auto grow with default settings.
+        Sfdc.canvas(function() {
+            Sfdc.canvas.client.autogrow(sr.client);
+        });
+        // Turn on auto grow with polling interval of 100ms (milliseconds).
+        Sfdc.canvas(function() {
+        //    Sfdc.canvas.client.autogrow(sr.client, true, 100);
+        });
+        // Turn off auto grow.
+        Sfdc.canvas(function() {
+        //    Sfdc.canvas.client.autogrow(sr.client, false);
+        });
+
+        //Subscribe to the parent window onscroll event.
+        //        Sfdc.canvas(function() {
+        //Capture the onScrolling event of the parent window
+        /*            Sfdc.canvas.client.subscribe(sr.client, {
+                        name: 'canvas.scroll',
+                        onData: function(event) {
+                            console.log("Parent's contentHeight: " + event.heights.contentHeight);
+                            console.log("Parent's pageHeight: " + event.heights.pageHeight);
+                            console.log("Parent's scrollTop: " + event.heights.scrollTop);
+                            console.log("Parent's contentWidth: " + event.widths.contentWidth);
+                            console.log("Parent's pageWidth: " + event.widths.pageWidth);
+                            console.log("Parent's scrollLeft: " + event.widths.scrollLeft);
+                        }
+                    });*/
+    </script>
+
+
+    <apex:form >
+        <apex:selectList value="{!employeeIds}" multiselect="true">
+            <apex:actionSupport event="onclick" action="{!getEmployee}" rerender="out" status="status"/>                                
+            <apex:selectOptions value="{!items}"/>
+        </apex:selectList><p/>
+
+        <apex:commandButton value="Get Employee" action="{!getEmployee}" rerender="out" status="status"/>
+    </apex:form>
+
+    <apex:outputPanel id="out">
+        <apex:actionstatus id="status" startText="Getting Employee…">
+            <apex:facet name="stop">
+                <apex:outputPanel >
+                    <img src='data:image/bmp;base64,{!image}' />
+                    <br/>
+                    <apex:outputText Value="{!lastName}, {!firstName}" />
+
+                    <p>You have selected:</p>
+                    <apex:dataList value="{!employeeIds}" var="c">{!c}</apex:dataList>
+                </apex:outputPanel>
+            </apex:facet>
+        </apex:actionstatus>
+    </apex:outputPanel>
+
+    {!id} <br />
+
+</apex:page>

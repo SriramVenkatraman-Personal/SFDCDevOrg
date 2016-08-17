@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TestCo Opportunity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestCo Opportunities</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account ID --></label>
+        <name>AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign ID --></label>
+        <name>CampaignId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Close Date --></label>
+        <name>CloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Received Connection ID --></label>
+        <name>ConnectionReceivedId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent Connection ID --></label>
+        <name>ConnectionSentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By ID --></label>
+        <name>CreatedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cumulative Change of Amount --></label>
+        <name>Cumulative_Change_of_Amount_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Currency --></label>
+        <name>CurrencyIsoCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deal Support Teams --></label>
+        <name>Deal_Support_Teams_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Quarter --></label>
+        <name>FiscalQuarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Year --></label>
+        <name>FiscalYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Period --></label>
+        <name>Fiscal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Category --></label>
+        <name>ForecastCategoryName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Category --></label>
+        <name>ForecastCategory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Open Activity --></label>
+        <name>HasOpenActivity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Line Item --></label>
+        <name>HasOpportunityLineItem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Overdue Task --></label>
+        <name>HasOverdueTask__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed --></label>
+        <name>IsClosed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>IsDeleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Won --></label>
+        <name>IsWon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity --></label>
+        <name>LastActivityDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By ID --></label>
+        <name>LastModifiedById__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Referenced Date --></label>
+        <name>LastReferencedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Viewed Date --></label>
+        <name>LastViewedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>LeadSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Count --></label>
+        <name>Line_Item_Count_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Management Approval Required --></label>
+        <name>Management_Approval_Required_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Management Approval --></label>
+        <name>Management_Approval_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Step --></label>
+        <name>NextStep__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of times Amount Changed --></label>
+        <name>No_of_times_Amount_Changed_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner ID --></label>
+        <name>OwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Manager Email Address --></label>
+        <name>Owner_Manager_Email_Address_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Book ID --></label>
+        <name>Pricebook2Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Probability (%) --></label>
+        <name>Probability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product List --></label>
+        <name>Product_List_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type ID --></label>
+        <name>RecordTypeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>StageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote ID --></label>
+        <name>SyncedQuoteId__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Modstamp --></label>
+        <name>SystemModstamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory ID --></label>
+        <name>TerritoryId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

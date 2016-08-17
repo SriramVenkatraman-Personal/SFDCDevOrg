@@ -1,5 +1,5 @@
 /* Controller associated with pages rendering the survey.
- * Used by SurveyPage, ResultsPage, TakeSurvey
+ * Used by SurveyPage, ResultsPage, TakeSurvey adding new comment
  */
 global virtual with sharing class ViewSurveyController {
     public String  qQuestion                      {get; set;}
